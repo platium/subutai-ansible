@@ -31,7 +31,22 @@
   ],
   "sshKey": "ztimur",
   "configuration": {
-    "playbook": "https://github.com/platium/subutai-ansible/archive/master.zip",
-    "script": "main.yml"
+    "playbook": "https://github.com/platium/commands/archive/master.zip",
+    "script": "main1.yml",
+    "groups": [
+      {
+        "name": "db",
+        "nodes_name": [
+          "backup-server"
+        ]
+      },
+      {
+        "name": "app",
+        "nodes_name": [
+          "ubuntu16-server",
+          "backup-server"
+        ]
+      }
+    ]
   }
 }
