@@ -19,7 +19,7 @@
   ],
   "sshKey": "root",
   "configuration": {
-    "playbook": "https://github.com/platium/commands/archive/master.zip",
+    "playbook": "https://github.com/platium/subutai-ansible/archive/master.zip",
     "script": "main.yml",
     "groups": [
       {
