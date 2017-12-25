@@ -1,49 +1,30 @@
 {
-  "name": "${environmentName}",
+  "name": "SubutaiAnsible",
   "description": "Environment configuration test blueprint",
   "nodes": [
     {
       "name": "backup-server",
       "template": "ubuntu16",
       "peer_group": "HTTP-GROUP",
-      "size": "MEDIUM"
-    },
-    {
-      "name": "ubuntu16-server",
-      "template": "ubuntu16",
-      "peer_group": "HTTP-GROUP",
-      "size": "SMALL"
+      "size": "TINY"
     }
   ],
   "peerGroups": [
     {
       "name": "HTTP-GROUP",
       "pricingPref": {
-        "maxPrice": "${maxPrice}"
-      }
-    },
-    {
-      "name": "CONFIG-GROUP",
-      "pricingPref": {
-        "maxPrice": "${maxPrice}"
+        "maxPrice": "50"
       }
     }
   ],
   "sshKey": "ztimur",
   "configuration": {
     "playbook": "https://github.com/platium/commands/archive/master.zip",
-    "script": "main1.yml",
+    "script": "main.yml",
     "groups": [
       {
         "name": "db",
         "nodes_name": [
-          "backup-server"
-        ]
-      },
-      {
-        "name": "app",
-        "nodes_name": [
-          "ubuntu16-server",
           "backup-server"
         ]
       }
