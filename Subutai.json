@@ -17,7 +17,7 @@
       }
     }
   ],
-  "sshKey": "ztimur",
+  "sshKey": "root",
   "configuration": {
     "playbook": "https://github.com/platium/commands/archive/master.zip",
     "script": "main.yml",
