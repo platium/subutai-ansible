@@ -6,26 +6,14 @@
       "name": "backup-server",
       "template": "ubuntu16",
       "peer_group": "HTTP-GROUP",
-      "size": "HUGE"
-    },
-    {
-      "name": "backup-server1",
-      "template": "ubuntu16",
-      "peer_group": "HTTP-GROUP",
-      "size": "HUGE"
-    },
-    {
-      "name": "backup-server2",
-      "template": "ubuntu16",
-      "peer_group": "HTTP-GROUP",
-      "size": "HUGE"
+      "size": "TINY"
     }
   ],
   "peerGroups": [
     {
       "name": "HTTP-GROUP",
       "pricingPref": {
-        "maxPrice": "50"
+        "maxPrice": "500"
       }
     }
   ],
